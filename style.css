@@ -1,0 +1,420 @@
+html,
+body {
+  font-family: "Raleway", sans-serif;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.home {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: 100%;
+  height: 100%;
+  min-width: 660px;
+  min-height: 460px;
+  margin: auto;
+  padding: 0 0 40px;
+  background-color: #C8DCDC;
+  overflow: hidden;
+}
+
+.home::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #a77f5d;
+}
+
+.bed {
+  position: relative;
+  width: 260px;
+  height: 60px;
+  right:20%;
+  margin-bottom: 40px;
+  background-color: #ffffff;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom: 20px solid #693b13;
+}
+
+.bed__head,
+.bed__footboard {
+  position: absolute;
+  bottom: -60px;
+  width: 12px;
+  background-color: #693b13;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  z-index: 2;
+}
+
+.bed__head {
+  left: -12px;
+  height: 140px;
+}
+
+.bed__footboard {
+  right: -12px;
+  height: 110px;
+}
+
+.bed__head::before,
+.bed__footboard::before {
+  content: "";
+  position: absolute;
+  top: -14px;
+  left: -2px;
+  width: 16px;
+  height: 16px;
+  background-color: inherit;
+  border-radius: 50%;
+}
+
+.bed__man {
+  position: absolute;
+  top: -20px;
+  left: 24px;
+  width: 40px;
+  height: 40px;
+  border-top: 20px solid #331404;
+  border-bottom: 20px solid rgba(255, 255, 255, 0);
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.bed__blanket {
+  position: absolute;
+  top: -60px;
+  left: 48px;
+  width: 180px;
+  height: 120px;
+  border-top: 60px solid #f1f1f1;
+  border-bottom: 60px solid rgba(255, 255, 255, 0);
+  border-radius: 50%;
+  z-index: 2;
+  animation: manBreathes 3s infinite linear;
+}
+
+.lamp {
+  position: absolute;
+  top: 35%;
+  left: 32%;
+  width: 27px;
+  height: 27px;
+  margin: auto;
+  background-color: #ffe32f;
+  border-radius: 50%;
+  box-shadow: 0 0 48px 10px #fff29d;
+  z-index: 2;
+}
+
+.lamp::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 0;
+  right: 0;
+  width: 10px;
+  height: 12px;
+  margin: auto;
+  background-color: #5d5c5c;
+  border-radius: 3px;
+}
+
+.cable {
+  position: absolute;
+  top: 0;
+  left: 33.05%;
+  width: 0.25%;
+  height: 35%;
+  margin: auto;
+  background-color: #333333;
+  z-index: 1;
+}
+
+.fly {
+  position: absolute;
+  top: 37%;
+  left: 33%;
+  width: 6px;
+  height: 4px;
+  margin: auto;
+  background-color: #2d2b2b;
+  border-radius: 50%;
+  z-index: 3;
+  animation: flyFlies 1s infinite linear;
+}
+
+@keyframes manBreathes {
+  0% {
+    top: -60px;
+    height: 120px;
+    border-width: 60px;
+  }
+  30% {
+    top: -60px;
+    height: 120px;
+    border-width: 60px;
+  }
+  40% {
+    top: -70px;
+    height: 140px;
+    border-width: 70px;
+  }
+  80% {
+    top: -60px;
+    height: 120px;
+    border-width: 60px;
+  }
+  100% {
+    top: -60px;
+    height: 120px;
+    border-width: 60px;
+  }
+}
+
+@keyframes flyFlies {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    opacity: 1;
+    transform: translate(-40px, -8px);
+  }
+  38% {
+    opacity: 1;
+  }
+  43% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+    transform: translate(0, -16px);
+  }
+  59% {
+    opacity: 0;
+  }
+  64% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+    transform: translate(40px, -8px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+.heading {
+  position: absolute;
+  top: 42%;
+  right: 14%;
+  font-size: 1.8rem;
+}
+
+.coming {
+  position: absolute;
+  top: 60%;
+  right: 22%;
+  font-size: 1.2rem;
+  color: #2FABE1;
+}
+
+.tagline {
+  position: absolute;
+  top: 70%;
+  right: 15%;
+  font-size: 1rem;
+}
+
+.imagestuff{
+  visibility: hidden;
+}
+
+@media screen and (max-width: 600px) {
+
+.normimageclass{
+    visibility: hidden;
+}
+  .phoneimageclass { 
+  width: 30%;
+  position: absolute;
+  top: 8%;
+  left:20%; 
+}
+  .bed {
+    visibility: hidden;
+  }
+
+  .clock {
+    visibility: hidden;
+  }
+
+  .cable {
+    visibility: hidden;
+  }
+  .lamp {
+    visibility: hidden;
+  }
+  .fly {
+    visibility: hidden;
+  }
+
+  .heading {
+    visibility: hidden;
+  }
+
+  .coming {
+    visibility: hidden;
+  }
+
+  .tagline{ 
+  visibility: hidden; }
+
+  .imagestuff{
+    visibility: visible;
+    align-content: center;
+  }
+
+  .headingphone {
+  position: absolute;
+  font-size: 2.5rem;
+  text-align: center;
+  right: 49%;
+  bottom: 50%;
+
+}
+  .comingphone {
+  position: absolute;
+  font-size: 1.5rem;
+  color: #2FABE1;
+  text-align: center;
+  bottom: 40%;
+  right: 50%;
+}
+
+.taglinephone {
+  position: absolute;
+  font-size: 1rem;
+  text-align: center;
+  bottom: 30%;
+  right: 50%;
+}
+
+}
+
+.regportals{
+  position: relative;
+  font-size: 1rem;
+  text-align: center;
+  padding: 20px;
+  color: #2FABE1;
+}
+
+
+.clock {
+  position: absolute;
+  top: 38%;
+  left: 15%;
+  width: 80px;
+  height: 80px;
+  margin: auto;
+  background: #fff url(/images/ios_clock.svg) no-repeat center;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+/*
+.clock {
+  border-radius: 50%;
+  background: #fff url(/images/ios_clock.svg) no-repeat center;
+  height: 80px;
+  width: 80px;
+  padding-bottom: 10%;
+  padding-top: 10%;
+  position: relative;
+  top: 160px;
+  left: -200px;
+  right: -420px;
+  z-index: 2
+}*/
+
+.clock.simple:after {
+  background: #000;
+  border-radius: 50%;
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 5%;
+  height: 5%;
+  z-index: 10;
+}
+
+.minutes-container, .hours-container, .seconds-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.hours {
+  background: #000;
+  height: 20%;
+  left: 48.75%;
+  position: absolute;
+  top: 30%;
+  transform-origin: 50% 100%;
+  width: 3.5%;
+}
+
+.minutes {
+  background: #000;
+  height: 40%;
+  left: 49%;
+  position: absolute;
+  top: 10%;
+  transform-origin: 50% 100%;
+  width: 2.5%;
+}
+
+.seconds {
+  background: #F90000;
+  height: 45%;
+  left: 49.5%;
+  position: absolute;
+  top: 14%;
+  transform-origin: 50% 80%;
+  width: 1.5%;
+  z-index: 8;
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+
+.hours-container {
+  animation: rotate 43200s infinite linear;
+}
+.minutes-container {
+  animation: rotate 3600s infinite steps(60);
+}
+.seconds-container {
+  animation: rotate 60s infinite steps(60);
+}
